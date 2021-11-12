@@ -1,0 +1,27 @@
+﻿@page "/"
+@inherits EmployeeListBase
+    <img class="mySlides" src="images/banner.jpg" alt="custom_html_banner1" style="width:100%">
+<h3>Danh sách LAPTOP</h3>
+<h1>SỐ LƯỢNG LAPTOP ĐÃ CHỌN - @SelectedEmployeesCount </h1>
+
+<input type="checkbox" id="showFooter" @bind="ShowFooter" />
+<label for="showFooter">Show Footer</label>
+
+@if (Employees == null)
+{
+    <div class="spinner"></div>
+}
+else
+{
+
+
+
+        <div class="card-deck">
+            @foreach (var employee in Employees)
+            {
+                <DisplayEmployee Employee="employee" ShowFooter="ShowFooter" OnEmployeeSelection="EmployeeSelectionChanged">
+
+                </DisplayEmployee>
+            }
+        </div>
+        }

@@ -1,0 +1,114 @@
+﻿@page "/"
+@namespace EmployeeManagement.Web.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EmployeeManagement.Web</title>
+    <base href="~/" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="EmployeeManagement.Web.styles.css" rel="stylesheet" />
+    <link href="~/css/flexslider2 (1).css" rel="stylesheet" />
+    <link href="~/css/flexslider2 (2).css" rel="stylesheet" />
+    <link href="~/css/style2.css" rel="stylesheet" />
+    <script src="~/js/easing.js"></script>
+    <script src="~/js/jquery.easing.js"></script>
+    <script src="~/js/jquery.flexslider.js"></script>
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/jquery-1.7.2.min.js"></script>
+    <script src="~/js/menu.js"></script>
+    <script src="~/js/menu-2.js"></script>
+    <script src="~/js/move-top.js"></script>
+    <script src="~/js/script.js"></script>
+
+
+
+</head>
+<body>
+    <component type="typeof(App)" render-mode="ServerPrerendered" />
+
+    <div id="blazor-error-ui">
+        <environment include="Staging,Production">
+            An error has occurred. This application may no longer respond until reloaded.
+        </environment>
+        <environment include="Development">
+            An unhandled exception has occurred. See browser dev tools for details.
+        </environment>
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <script src="_framework/blazor.server.js"></script>
+
+
+    <div class="footer">
+        <div class="wrapper">
+            <div class="section group">
+                <div class="col_1_of_4 span_1_of_4">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Customer Service</a></li>
+                        <li><a href="#"><span>Advanced Search</span></a></li>
+                        <li><a href="#">Orders and Returns</a></li>
+                        <li><a href="#"><span>Contact Us</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="col_1_of_4 span_1_of_4">
+                    <h4>Map</h4>
+                    <ul>
+                       
+                        <li><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.7508346588015!2d105.11876731461507!3d9.954676992882254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0b5d4ba42f0f1%3A0xb369123c4b264869!2sFPT%20Shop!5e0!3m2!1svi!2s!4v1636013484822!5m2!1svi!2s" width="200" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>   </li>
+                    </ul>
+                </div>
+
+                <div class="col_1_of_4 span_1_of_4">
+                    
+                    <ul>
+
+                        <li> <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=200&height=50&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="200" height="150" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> </li>
+                    </ul>
+                </div>  
+
+
+
+                
+
+
+
+                <div class="col_1_of_4 span_1_of_4">
+                    <h4>Contact</h4>
+                    <ul>
+                        
+                        <li><span>0377650977</span></li>
+
+                    </ul>
+                    <div class="social-icons">
+                        <h4>Follow Us</h4>
+                        <ul>
+                            <li class="facebook"><a href="https://www.facebook.com" target="_blank"> </a></li>
+                            @*<li class="twitter"><a href="#" target="_blank"> </a></li>
+                    <li class="googleplus"><a href="#" target="_blank"> </a></li>*@
+                            <li class="contact"><a href="https://fptshop.com.vn" target="_blank"> </a></li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copy_right">
+                <p>  Design by Hà Gia Luân </p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

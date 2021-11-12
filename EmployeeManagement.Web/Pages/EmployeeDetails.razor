@@ -1,0 +1,80 @@
+﻿@page "/employeedetails/{id}"
+@page "/employeedetails"
+@inherits EmployeeDetailsBase
+
+@if (Employee == null || Employee.Department == null)
+{
+    <div class="spinner"></div>
+}
+else
+{
+    <div class="row justify-content-center m-3">
+        <div class="col-sm-8">
+            <div class="card">
+                <div class="card-header">
+                    <h1>@*@Employee.FirstName*@ @Employee.LastName</h1>
+                </div>
+
+
+
+
+
+                <div class="card-body text-center">
+                    <div class="slider">
+                        <div class="slides">
+
+
+
+                            <div class="slider-1">
+                                <img class="card-img-top" src="@Employee.PhotoPath"
+                                     @onmousemove="@(e => Coordinates = $"X = {e.ClientX} Y = {e.ClientY}")" />
+                            </div>
+
+                            <div class="slider-2">
+                                <img class="card-img-top" src="@Employee.PhotoPath2"
+                                     @onmousemove="@(e => Coordinates = $"X = {e.ClientX} Y = {e.ClientY}")" />
+                            </div>
+
+                            <div class="slider-3">
+                                <img class="card-img-top" src="@Employee.PhotoPath3"
+                                     @onmousemove="@(e => Coordinates = $"X = {e.ClientX} Y = {e.ClientY}")" />
+                            </div>
+
+                            <div class="slider-4">
+                                <img class="card-img-top" src="@Employee.PhotoPath4"
+                                     @onmousemove="@(e => Coordinates = $"X = {e.ClientX} Y = {e.ClientY}")" />
+                            </div>
+
+
+
+
+                        </div>
+                        </div>
+
+
+
+
+
+
+
+
+                        <h1>@Coordinates</h1>
+
+                        <h4 style="color:red">Giá : @Employee.Gia</h4>
+                        <h4>Thông tin sản phẩm : @Employee.thongtin</h4>
+                        @*@<h4>Employee ID : @Employee.EmployeeId</h4>
+        <h4>Email : @Employee.Email</h4>
+        <h4>Department : @Employee.Department.DepartmentName</h4>*@
+                    </div>
+                <button class="btn btn-primary" @onclick="@Button_Click">@ButtonText</button>
+                <div class="card-footer text-center @CssClass">
+                    <a href="/" class="btn btn-primary">Back</a>
+                    <a href="@($"editemployee/{Employee.EmployeeId}")" class="btn btn-primary">Edit</a>
+                    <a href="#" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+                }
